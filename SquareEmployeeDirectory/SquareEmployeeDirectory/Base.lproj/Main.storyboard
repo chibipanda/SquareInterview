@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="syw-6i-LGM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Employee List-->
+        <scene sceneID="qaz-cf-yD2">
+            <objects>
+                <tableViewController title="Employee List" id="U4y-09-f15" customClass="EmployeeTableViewController" customModule="SquareEmployeeDirectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SiA-H1-Dtp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="employeeCell" rowHeight="95" id="4wy-Ny-dno" customClass="EmployeeTableViewCell" customModule="SquareEmployeeDirectory" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="95"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4wy-Ny-dno" id="WAK-hZ-Bhr">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="95"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XP4-06-JA8">
+                                            <rect key="frame" x="319" y="0.0" width="95" height="95"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="95" id="ED5-H7-czS"/>
+                                                <constraint firstAttribute="width" constant="95" id="KzI-DK-vH0"/>
+                                                <constraint firstAttribute="width" secondItem="XP4-06-JA8" secondAttribute="height" multiplier="1:1" id="SJr-2E-41d"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIq-4p-VXf">
+                                            <rect key="frame" x="20" y="26" width="279" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7u-6s-uy3">
+                                            <rect key="frame" x="20" y="46" width="279" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XP4-06-JA8" firstAttribute="leading" secondItem="iIq-4p-VXf" secondAttribute="trailing" constant="20" id="3fS-sE-2Qf"/>
+                                        <constraint firstItem="iIq-4p-VXf" firstAttribute="leading" secondItem="WAK-hZ-Bhr" secondAttribute="leadingMargin" id="62i-xc-iD6"/>
+                                        <constraint firstItem="T7u-6s-uy3" firstAttribute="top" secondItem="iIq-4p-VXf" secondAttribute="bottom" constant="-1" id="6aG-kf-rSe"/>
+                                        <constraint firstAttribute="bottom" secondItem="XP4-06-JA8" secondAttribute="bottom" id="7vt-ld-0No"/>
+                                        <constraint firstItem="T7u-6s-uy3" firstAttribute="leading" secondItem="WAK-hZ-Bhr" secondAttribute="leadingMargin" id="QIt-lI-Cxu"/>
+                                        <constraint firstItem="XP4-06-JA8" firstAttribute="leading" secondItem="T7u-6s-uy3" secondAttribute="trailing" constant="20" id="f2Y-DV-4CN"/>
+                                        <constraint firstAttribute="trailing" secondItem="XP4-06-JA8" secondAttribute="trailing" id="hjN-WY-GgX"/>
+                                        <constraint firstItem="iIq-4p-VXf" firstAttribute="top" secondItem="WAK-hZ-Bhr" secondAttribute="topMargin" constant="15" id="mko-j6-kjh"/>
+                                        <constraint firstItem="XP4-06-JA8" firstAttribute="top" secondItem="WAK-hZ-Bhr" secondAttribute="top" id="ybe-QK-ajx"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="employeeName" destination="iIq-4p-VXf" id="ty4-IR-fKh"/>
+                                    <outlet property="employeePhoto" destination="XP4-06-JA8" id="XHJ-Mp-AC4"/>
+                                    <outlet property="employeeTeam" destination="T7u-6s-uy3" id="EiQ-uy-ddb"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="U4y-09-f15" id="GQ9-d6-Ih2"/>
+                            <outlet property="delegate" destination="U4y-09-f15" id="LhT-jG-Mhb"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="S3J-iI-JUv"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cac-mV-1IP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1111.5942028985507" y="-2.0089285714285712"/>
+        </scene>
+        <!--Employee Detail View Controller-->
+        <scene sceneID="kAm-da-wp3">
+            <objects>
+                <viewController storyboardIdentifier="Employee Detail View" useStoryboardIdentifierAsRestorationIdentifier="YES" id="e1j-cH-SIZ" customClass="EmployeeDetailViewController" customModule="SquareEmployeeDirectory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vh0-Fr-wcG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ujB-YM-kqD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="358.5"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oag-eH-tr0">
+                                <rect key="frame" x="87" y="238.5" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oag-eH-tr0" secondAttribute="height" multiplier="1:1" id="AcX-mI-PMD"/>
+                                    <constraint firstAttribute="width" constant="240" id="UTO-40-fqF"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="120"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sjN-t3-YFe">
+                                <rect key="frame" x="20" y="498.5" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6eu-01-MVA">
+                                <rect key="frame" x="20" y="542" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F4w-LB-5fi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ujB-YM-kqD" firstAttribute="trailing" secondItem="F4w-LB-5fi" secondAttribute="trailing" id="1jo-rM-b56"/>
+                            <constraint firstItem="F4w-LB-5fi" firstAttribute="trailing" secondItem="sjN-t3-YFe" secondAttribute="trailing" constant="20" id="GKg-gh-iif"/>
+                            <constraint firstItem="6eu-01-MVA" firstAttribute="centerX" secondItem="Vh0-Fr-wcG" secondAttribute="centerX" id="Gh2-ro-hdV"/>
+                            <constraint firstItem="6eu-01-MVA" firstAttribute="leading" secondItem="F4w-LB-5fi" secondAttribute="leading" constant="20" id="Idf-gh-nHw"/>
+                            <constraint firstItem="6eu-01-MVA" firstAttribute="top" secondItem="sjN-t3-YFe" secondAttribute="bottom" constant="10" id="JM0-Uw-n3C"/>
+                            <constraint firstItem="ujB-YM-kqD" firstAttribute="leading" secondItem="F4w-LB-5fi" secondAttribute="leading" id="XXw-hK-pzz"/>
+                            <constraint firstItem="ujB-YM-kqD" firstAttribute="height" secondItem="Vh0-Fr-wcG" secondAttribute="height" multiplier="0.4" id="ZER-lW-Kx1"/>
+                            <constraint firstItem="sjN-t3-YFe" firstAttribute="centerX" secondItem="Vh0-Fr-wcG" secondAttribute="centerX" id="a11-9g-OkP"/>
+                            <constraint firstItem="sjN-t3-YFe" firstAttribute="leading" secondItem="F4w-LB-5fi" secondAttribute="leading" constant="20" id="g5e-mx-y8a"/>
+                            <constraint firstItem="oag-eH-tr0" firstAttribute="centerX" secondItem="Vh0-Fr-wcG" secondAttribute="centerX" id="ja3-I9-w9f"/>
+                            <constraint firstItem="oag-eH-tr0" firstAttribute="firstBaseline" secondItem="ujB-YM-kqD" secondAttribute="baseline" constant="-120" id="ma1-JA-Kbw"/>
+                            <constraint firstItem="sjN-t3-YFe" firstAttribute="top" secondItem="oag-eH-tr0" secondAttribute="bottom" constant="20" id="q4z-dh-Jic"/>
+                            <constraint firstItem="F4w-LB-5fi" firstAttribute="trailing" secondItem="6eu-01-MVA" secondAttribute="trailing" constant="20" id="xCM-FF-a5l"/>
+                            <constraint firstItem="ujB-YM-kqD" firstAttribute="top" secondItem="Vh0-Fr-wcG" secondAttribute="top" id="zeV-oA-IcD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="employeeName" destination="sjN-t3-YFe" id="Qx3-Ga-aZA"/>
+                        <outlet property="employeePhoto" destination="oag-eH-tr0" id="hJ1-RI-oJ9"/>
+                        <outlet property="employeeTeam" destination="6eu-01-MVA" id="dZS-uY-fq2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FmE-lz-nlj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-379.71014492753625" y="-2.0089285714285712"/>
+        </scene>
+        <!--Employee List-->
+        <scene sceneID="OD8-wX-iX6">
+            <objects>
+                <navigationController title="Employee List" id="syw-6i-LGM" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1LY-wZ-3xB">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="U4y-09-f15" kind="relationship" relationship="rootViewController" id="OnC-mf-uiF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3CM-Ta-c37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2001" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
